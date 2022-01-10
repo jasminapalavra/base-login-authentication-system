@@ -54,7 +54,7 @@ const Signin = (props) => {
     redirectToReferrer: false,
   });
 
-  const clickSubmit = ({history}) => {
+  const clickSubmit = ({ history }) => {
     const user = {
       email: values.email || undefined,
       password: values.password || undefined,
@@ -69,8 +69,6 @@ const Signin = (props) => {
         });
       }
     });
-    console.log(values.email);
-    console.log(values.password);
   };
 
   const handleChange = (name) => (event) => {

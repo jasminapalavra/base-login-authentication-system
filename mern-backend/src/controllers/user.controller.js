@@ -28,6 +28,7 @@ const userByID = (req, res, next, id) => {
       return res.status(404).json({ error: "User not found!" });
     }
     req.profile = user;
+    console.log(req.profile)
     next();
   });
 };
@@ -35,7 +36,9 @@ const userByID = (req, res, next, id) => {
 const read = (req, res) => {
   req.profile.hashed_password = undefined;
   req.profile.salt = undefined;
+  console.log(req.profile)
   res.status(200).json(req.profile);
+  
 };
 
 const update = (req, res, next) => {

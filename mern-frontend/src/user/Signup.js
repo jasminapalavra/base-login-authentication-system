@@ -72,7 +72,6 @@ const Signup = () => {
         };
        
         create(user).then((data) => {
-          console.log(user.email)
           if (data.error) {
             setValues({ ...values, error: data.error });
           } else {
@@ -80,7 +79,7 @@ const Signup = () => {
               setValues({ ...values, error: "", open: true });
             
           }
-          console.log(data);
+          
           
         });
         setValues({...values, error: "", open: true})

@@ -44,7 +44,9 @@
 //         if (data && data.error) {
 //           setRedirectToSignin(true);
 //         } else {
+//             console.log(data)
 //           setUser(data);
+//           console.log(user)
 //         }
 //       }
 //     );
